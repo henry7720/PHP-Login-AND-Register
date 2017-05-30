@@ -1,0 +1,26 @@
+==Page Protection Instructions==
+1. Open a .php page you want to password protect by login.
+2. Add this to the VERY BEGINNING of it (Before <!DOCTYPE HTML>):
+
+<?php
+session_start();
+if(isset($_SESSION['username'])) {
+?>
+
+3. Add this to the VERY END of it (After </html>):
+
+<?php
+} else {
+	header("Location: http://example.com/login.php");
+	}
+?>
+
+3a. Alternate to #3
+
+<?php
+} else {
+	echo "<script>window.location=\"http://example.com/login.php\";</script>";
+	}
+?>
+		
+4. Done!
