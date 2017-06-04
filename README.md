@@ -12,7 +12,7 @@ You can download the latest version or checkout all the releases [here](https://
 
 ## How To:
 
-First create a table in a MySQL database called users, with the columns id, username, password, salt
+First create a table in a MySQL database called users, with the columns id, username, password, and salt (in that order from left to right)
 
 Next, open the [register.php](https://github.com/henry7720/PHP-Login-AND-Register/blob/master/register.php) file and fill with your database details (including Google reCaptcha sitekey and secret).
 
