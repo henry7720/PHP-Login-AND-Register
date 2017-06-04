@@ -6,7 +6,7 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 	$db = new PDO('mysql:host=127.0.0.1;mydatabase', $user, $pass);
 	
 	// Captcha info
-	$recaptcha_secret = "sitekeygoeshere";
+	$recaptcha_secret = "secretgoeshere";
 	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$recaptcha_secret."&response=".$_POST['g-recaptcha-response']);
     $response = json_decode($response, true);
     
@@ -50,6 +50,7 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 <html>
 <head>
 <title>Register</title>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
 <h1>Register</h1>
@@ -61,6 +62,7 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 <input type="password" name="pass2" id="pass2" placeholder="Confirm Password" maxlength="32">
 <br>
 <br>
+<!-- The reCaptcha does not need to be displayed inline-block, but if you want to center align your reCaptcha, it does -->
 <div class="g-recaptcha" data-sitekey="sitekeygoeshere" style="display:inline-block;"></div>
 <br>
 <br>
