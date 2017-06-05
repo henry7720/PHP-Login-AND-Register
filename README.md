@@ -4,7 +4,7 @@ A Simple Login and Register developed in PHP with [Google's reCaptcha](https://w
 
 ## Download
 
-You can download the latest version or checkout all the releases [here](https://github.com/henry7720/PHP-Login-AND-Register/releases).
+You can download the latest version or view all of the releases [here](https://github.com/henry7720/PHP-Login-AND-Register/releases).
 
 ## Requirements
 
