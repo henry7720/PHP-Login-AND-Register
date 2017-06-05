@@ -150,7 +150,7 @@ if(!isset($_SESSION['username'])) {
 
 ## Password Protection
 
-This Login and Register was made for password protecting pages.
+This Login and Register is made for password protecting pages.
 
 Reference [`addthistoeachpage.txt`](addthistoeachpage.txt) for more details.
 
