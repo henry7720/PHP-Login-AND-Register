@@ -8,7 +8,7 @@ You can download the latest version or view all of the releases [here](https://g
 
 ## Requirements
 
-* PHP __>=__ 5.4
+* PHP ≥ 5.4
 
 ## How To:
 
