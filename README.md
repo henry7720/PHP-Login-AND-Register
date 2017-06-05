@@ -1,6 +1,6 @@
 # Simple PHP Login AND Register
 
-A Simple Login and Register developed in PHP with [Google's reCaptcha](https://www.google.com/recaptcha/admin).
+A Simple Login/Register developed in PHP with [Google's reCaptcha](https://www.google.com/recaptcha/admin).
 
 ## Download
 
