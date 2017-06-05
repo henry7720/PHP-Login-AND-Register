@@ -14,7 +14,7 @@ You can download the latest version or checkout all the releases [here](https://
 
 First create a table in a MySQL database called users, with the columns id, username, password, and salt (in that order from left to right)
 
-Next, open the [register.php](https://github.com/henry7720/PHP-Login-AND-Register/blob/master/register.php) file and fill with your database details (including Google reCaptcha sitekey and secret).
+Next, open the [`register.php`](register.php) file and fill with your database details (including Google reCaptcha sitekey and secret).
 
 ```php
 <?php
@@ -90,7 +90,7 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 </html>
 ```
 
-Finally, open [login.php](https://github.com/henry7720/PHP-Login-AND-Register/blob/master/login.php) and also fill in your database details.
+Finally, open [`login.php`](login.php) and also fill in your database details.
 
 ```php
 <?php
@@ -152,7 +152,7 @@ if(!isset($_SESSION['username'])) {
 
 This Login and Register was made for password protecting pages.
 
-Reference [addthistoeachpage.txt](https://github.com/henry7720/PHP-Login-AND-Register/blob/master/addthistoeachpage.txt) for more details.
+Reference [`addthistoeachpage.txt`](addthistoeachpage.txt) for more details.
 
 ## History
 
