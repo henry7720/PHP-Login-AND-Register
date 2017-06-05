@@ -14,7 +14,7 @@ You can download the latest version or checkout all the releases [here](https://
 
 First create a table in a MySQL database called users, with the columns id, username, password, and salt (in that order from left to right)
 
-Next, open the [`register.php`](register.php) file and fill with your database details (including Google reCaptcha sitekey and secret).
+Next, open the [`register.php`](register.php) file and fill in your database details (including Google reCaptcha sitekey and secret).
 
 ```php
 <?php
@@ -153,10 +153,6 @@ if(!isset($_SESSION['username'])) {
 This Login and Register was made for password protecting pages.
 
 Reference [`addthistoeachpage.txt`](addthistoeachpage.txt) for more details.
-
-## History
-
-Check [Releases](https://github.com/henry7720/PHP-Login-AND-Register/releases) for detailed changelog.
 
 ## License
 
