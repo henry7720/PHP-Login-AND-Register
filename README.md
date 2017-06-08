@@ -27,7 +27,7 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 	// Captcha info
 	$recaptcha_secret = "secretgoeshere";
 	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$recaptcha_secret."&response=".$_POST['g-recaptcha-response']);
-    $response = json_decode($response, true);
+        $response = json_decode($response, true);
     
     // Begin register
 	$username = trim($_POST['username']);
