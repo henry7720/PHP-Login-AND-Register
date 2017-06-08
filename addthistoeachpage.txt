@@ -11,7 +11,7 @@ if(isset($_SESSION['username'])) {
 
 <?php
 } else {
-	header("Location: http://example.com/login.php");
+	header("Location: http://example.com/login.php?next=basename($_SERVER['PHP_SELF'])");
 	}
 ?>
 
