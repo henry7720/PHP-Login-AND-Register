@@ -11,8 +11,8 @@ if(isset($_SESSION['username'])) {
 
 <?php
 } else {
-	header("Location: http://example.com/login.php?next=basename($_SERVER['PHP_SELF'])");
-	}
+    header("Location: http://example.com/login.php?next=" .$_SERVER['PHP_SELF']);
+}
 ?>
 
 # Replace http://example.com with your ip or domain.
