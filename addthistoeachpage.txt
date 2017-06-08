@@ -16,5 +16,9 @@ if(isset($_SESSION['username'])) {
 ?>
 
 # Replace http://example.com with your ip or domain.
+
+3a. Alternate to #3
+
+Removed.
 		
 4. Done!
