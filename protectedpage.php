@@ -8,6 +8,7 @@ if(isset($_SESSION['username'])) {
 <title>Password Protected Page</title>
 </head>
 <body>
+<!-- For password protecting: the name of the page and it's content can be anything, the only requirement of it being the PHP snippets -->
 <h1>Protected Page</h1>
 <p>This content CANNOT be viewed without an account!</p>
 </body>
