@@ -152,7 +152,7 @@ if(!isset($_SESSION['username'])) {
 
 This Login and Register is made for password protecting pages.
 
-Reference [`addthistoeachpage.txt`](addthistoeachpage.txt) for instructions and [`pageprotected.php`](pageprotected.php) for the template.
+Reference [`addthistoeachpage.txt`](addthistoeachpage.txt) for instructions and [`protectedpage.php`](protectedpage.php) for the template.
 
 ## License
 
