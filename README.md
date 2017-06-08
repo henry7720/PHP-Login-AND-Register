@@ -129,7 +129,7 @@ if(!isset($_SESSION['username'])) {
 </head>
 <body>
 <h1>Login</h1>
-<form action="login.php?next=<?php echo $_GET['next']; ?>" method="post">
+<form action="login.php?next=<?php echo htmlentities($_GET['next']); ?>" method="post">
 <input type="text" name="username" id="username" placeholder="Username">
 <br>
 <input type="password" name="password" id="password" placeholder="Password">
