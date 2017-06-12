@@ -53,8 +53,8 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
-<?php {
-echo "<p>$msg</p><br>";
+<?php if (!empty($msg)) {
+   echo "<p>$msg</p><br>";
 } ?>
 <h1>Register</h1>
 <form action="register.php" method="post">
