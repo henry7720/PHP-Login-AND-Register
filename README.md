@@ -14,7 +14,7 @@ You can download the latest version or view all of the releases [here](https://g
 
 First create a table in a MySQL database called users with this command:
 
-```SQL
+```sql
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
@@ -58,21 +58,21 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 						$reg->bindParam(':password', $hashedPassword);
 						$reg->bindParam(':salt', $salt);
 						$reg->execute();
-						echo "<p>Successfully registered! You may now <a href=\"login.php\">login</a>.</p><br>";
+						$msg = "Successfully registered! You may now <a href=\"login.php\">login</a>.";
 					} else {
-						echo "<p>The Recaptcha was not completed correctly.</p><br>";
+						$msg = "The reCaptcha was not completed correctly.";
 					}
 				} else {
-					echo "<p>Your passwords did not match.</p><br>";
+					$msg = "Your passwords did not match.";
 				}
 			} else {
-				echo "<p>Your password must be between 8 and 32 characters.</p><br>";
+				$msg = "Your password must be between 8 and 32 characters.";
 			}
 		} else {
-			echo "<p>That username is already taken.</p><br>";
+			$msg = "That username is already taken!";
 		}
 	} else {
-		echo "<p>Your username must be between 4 and 12 characters and contain only letters, numbers, and/or spaces.</p><br>";
+		$msg = "Your username must be between 4 and 12 characters and contain only letters, numbers, and/or spaces.";
 	}
 }
 ?>				
@@ -82,6 +82,9 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
+<?php {
+echo "<p>$msg</p><br>";
+} ?>
 <h1>Register</h1>
 <form action="register.php" method="post">
 <input type="text" name="username" id="username" placeholder="Create a Username" maxlength="12">
@@ -122,11 +125,11 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 			$_SESSION['username'] = $details['username'];
 		} else {
 			// Incorrect password
-			echo "<p>Incorrect password.</p><br>";
+			$msg = "Incorrect password.";
 		}
 	} else {
 		// The username does not exist
-			echo "<p>That username does not exist!</p><br>";
+			$msg = "That username does not exist!";
 	}
 }
 if(!isset($_SESSION['username'])) {
@@ -138,6 +141,9 @@ if(!isset($_SESSION['username'])) {
 <meta charset="utf-8">
 </head>
 <body>
+<?php {
+echo "<p>$msg</p><br>";
+} ?>	
 <h1>Login</h1>
 <form action="login.php?next=<?php echo htmlentities($_GET['next']); ?>" method="post">
 <input type="text" name="username" id="username" placeholder="Username">
@@ -152,7 +158,7 @@ if(!isset($_SESSION['username'])) {
 </html>
 <?php
 } else {
-	header("Location: http://example.com" .$_GET['next']);
+	header("Location: http://example.com".$_GET['next']);
 	}
 # Change "http://example.com" to your IP or URL	
 ?>
