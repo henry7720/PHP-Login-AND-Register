@@ -33,9 +33,9 @@ if(!isset($_SESSION['username'])) {
 <meta charset="utf-8">
 </head>
 <body>
-<?php {
-echo "<p>$msg</p><br>";
-} ?>	
+<?php if (!empty($msg)) {
+   echo "<p>$msg</p><br>";
+} ?>
 <h1>Login</h1>
 <form action="login.php?next=<?php echo htmlentities($_GET['next']); ?>" method="post">
 <input type="text" name="username" id="username" placeholder="Username">
