@@ -17,9 +17,9 @@ First create a table in a MySQL database called users with this command:
 ```sql
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `salt` varchar(255) NOT NULL,
+  `username` varchar(12) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `salt` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 ```
