@@ -17,11 +17,11 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 			$_SESSION['username'] = $details['username'];
 		} else {
 			// Incorrect password
-			echo "<p>Incorrect password.</p><br>";
+			$msg = "Incorrect password.";
 		}
 	} else {
 		// The username does not exist
-			echo "<p>That username does not exist!</p><br>";
+			$msg = "That username does not exist!";
 	}
 }
 if(!isset($_SESSION['username'])) {
@@ -33,6 +33,9 @@ if(!isset($_SESSION['username'])) {
 <meta charset="utf-8">
 </head>
 <body>
+<?php {
+echo "<p>$msg</p><br>";
+} ?>	
 <h1>Login</h1>
 <form action="login.php?next=<?php echo htmlentities($_GET['next']); ?>" method="post">
 <input type="text" name="username" id="username" placeholder="Username">
@@ -47,7 +50,7 @@ if(!isset($_SESSION['username'])) {
 </html>
 <?php
 } else {
-	header("Location: http://example.com" .$_GET['next']);
+	header("Location: http://example.com".$_GET['next']);
 	}
 # Change "http://example.com" to your IP or URL	
 ?>
