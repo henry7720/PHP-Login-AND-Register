@@ -21,7 +21,7 @@ CREATE TABLE `users` (
   `password` varchar(32) NOT NULL,
   `salt` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 ```
 
 Next, open the [`register.php`](register.php) file and fill in your database details (including Google reCaptcha sitekey and secret).
