@@ -21,7 +21,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 		}
 	} else {
 		// The username does not exist
-			$msg = "That username does not exist!";
+                $msg = "That username does not exist!";
 	}
 }
 if(!isset($_SESSION['username'])) {
