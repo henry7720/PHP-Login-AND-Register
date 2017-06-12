@@ -8,7 +8,7 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 	// Captcha info
 	$recaptcha_secret = "secretgoeshere";
 	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$recaptcha_secret."&response=".$_POST['g-recaptcha-response']);
-    $response = json_decode($response, true);
+        $response = json_decode($response, true);
     
     // Begin register
 	$username = trim($_POST['username']);
@@ -29,21 +29,21 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 						$reg->bindParam(':password', $hashedPassword);
 						$reg->bindParam(':salt', $salt);
 						$reg->execute();
-						echo "<p>Successfully registered! You may now <a href=\"login.php\">login</a>.</p><br>";
+						$msg = "Successfully registered! You may now <a href=\"login.php\">login</a>.";
 					} else {
-						echo "<p>The Recaptcha was not completed correctly.</p><br>";
+						$msg = "The reCaptcha was not completed correctly.";
 					}
 				} else {
-					echo "<p>Your passwords did not match.</p><br>";
+					$msg = "Your passwords did not match.";
 				}
 			} else {
-				echo "<p>Your password must be between 8 and 32 characters.</p><br>";
+				$msg = "Your password must be between 8 and 32 characters.";
 			}
 		} else {
-			echo "<p>That username is already taken.</p><br>";
+			$msg = "That username is already taken!";
 		}
 	} else {
-		echo "<p>Your username must be between 4 and 12 characters and contain only letters, numbers, and/or spaces.</p><br>";
+		$msg = "Your username must be between 4 and 12 characters and contain only letters, numbers, and/or spaces.";
 	}
 }
 ?>				
@@ -53,6 +53,9 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
+<?php {
+echo "<p>$msg</p><br>";
+} ?>
 <h1>Register</h1>
 <form action="register.php" method="post">
 <input type="text" name="username" id="username" placeholder="Create a Username" maxlength="12">
