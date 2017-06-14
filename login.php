@@ -34,7 +34,7 @@ if(!isset($_SESSION['username'])) {
 </head>
 <body>
 <?php if (!empty($msg)) {
-   echo "<p>$msg</p><br>";
+   echo "<p>$msg</p>";
 } ?>
 <h1>Login</h1>
 <form action="login.php?next=<?php echo htmlentities($_GET['next']); ?>" method="post">
