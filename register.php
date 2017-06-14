@@ -46,7 +46,8 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 		$msg = "Your username must be between 4 and 12 characters and contain only letters, numbers, and/or spaces.";
 	}
 }
-?>				
+?>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Register</title>
@@ -54,7 +55,7 @@ if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass2']))
 </head>
 <body>
 <?php if (!empty($msg)) {
-   echo "<p>$msg</p><br>";
+   echo "<p>$msg</p>";
 } ?>
 <h1>Register</h1>
 <form action="register.php" method="post">
