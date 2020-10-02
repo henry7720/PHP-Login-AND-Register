@@ -1,9 +1,8 @@
 <?php
 session_start();
+require "config.php";
 if(isset($_SESSION['username'])) {
-$user = "username";
-$pass = "password";
-$db = new PDO('mysql:host=127.0.0.1;dbname=dbname', $user, $pass);
+$db = new PDO('mysql:host=127.0.0.1;dbname=' . DB_NAME, DB_USER, DB_PASS);
 
 $query = $db->prepare("SELECT * FROM users ORDER BY id DESC LIMIT 1");
 $query2 = $db->prepare("SELECT * FROM users");
