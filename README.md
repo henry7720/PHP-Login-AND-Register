@@ -14,8 +14,9 @@ You can download the latest version or view all of the releases [here](https://g
 
 1. [Download all the files](https://github.com/henry7720/PHP-Login-AND-Register/archive/master.zip)
 2. Create a table called users by importing [`createtable.sql`](createtable.sql) into a MySQL Database:
-3. Open the [`register.php`](register.php) file and fill in your database details (including Google reCaptcha sitekey and secret).
-4. Finally, open [`login.php`](login.php) and also fill in your database details.
+3. Configure your Database & Captcha -Settings in config.php
+4. Open the [`register.php`](register.php) file and fill in your database details (including Google reCaptcha sitekey and secret).
+5. Finally, open [`login.php`](login.php) and also fill in your database details.
 
 ## Note
 
