@@ -25,4 +25,4 @@ Reference [`addthistoeachpage.txt`](addthistoeachpage.txt) for instructions and 
 
 ## License
 
-[MIT](LICENSE)
+[GPLv3](LICENSE)
