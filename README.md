@@ -25,4 +25,4 @@ Reference [`addthistoeachpage.txt`](addthistoeachpage.txt) for instructions and 
 
 ## License
 
-[GPLv3](LICENSE)
+[AGPLv3](LICENSE)
